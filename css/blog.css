@@ -1,0 +1,99 @@
+/* Importa una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Reset básico para una mejor consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor para el fondo animado con partículas */
+body {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+}
+
+/* Animación de partículas flotantes */
+@keyframes float {
+    0% { transform: translateY(0px); opacity: 0.6; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0px); opacity: 0.6; }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 4s infinite ease-in-out;
+}
+
+.particle:nth-child(1) { left: 10%; top: 20%; animation-duration: 5s; }
+.particle:nth-child(2) { left: 25%; top: 50%; animation-duration: 6s; }
+.particle:nth-child(3) { left: 50%; top: 10%; animation-duration: 4s; }
+.particle:nth-child(4) { left: 70%; top: 80%; animation-duration: 7s; }
+.particle:nth-child(5) { left: 90%; top: 30%; animation-duration: 5.5s; }
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out;
+}
+
+table:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+td {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #1e3c72;
+    font-weight: 700;
+}
